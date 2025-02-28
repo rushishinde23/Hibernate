@@ -53,8 +53,10 @@ public class ManyToManyMappingDemo {
         employeeList2.add(e3);
 
 
+
         p1.setEmployeeList(employeeList1);
         p3.setEmployeeList(employeeList2);
+
 
         projectList1.add(p1);
         projectList1.add(p2);
@@ -66,7 +68,7 @@ public class ManyToManyMappingDemo {
 
         e1.setProjectList(projectList1);
         e2.setProjectList(projectList2);
-        e3.setProjectList(projectList3);
+       // e3.setProjectList(projectList3);
 
         SessionFactory sessionFactory=new Configuration().configure().buildSessionFactory();
         Session session=sessionFactory.openSession();

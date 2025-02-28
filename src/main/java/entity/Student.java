@@ -1,9 +1,15 @@
 package entity;
 
+import jakarta.persistence.Cacheable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 
+
+//@Cacheable
+//@Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
 @Entity
 @Table(name = "student")
 public class Student {
@@ -41,6 +47,7 @@ public class Student {
     public Certificate getCertificate() {
         return certificate;
     }
+
 
     public void setCertificate(Certificate certificate) {
         this.certificate = certificate;

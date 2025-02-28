@@ -29,4 +29,6 @@ public class XmlMappingDemo {
         session.close();
         sessionFactory.close();
     }
+
+
 }

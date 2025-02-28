@@ -24,10 +24,10 @@ public class App
     public static void main( String[] args ) throws IOException {
         System.out.println("hibernate configuration done..");
 
-        Student student=new Student();
-        student.setId(104);
-        student.setName("Ashish");
-        student.setCity("Nanded");
+//        Student student=new Student();
+//        student.setId(104);
+//        student.setName("Ashish");
+//        student.setCity("Nanded");
 
         Address address=new Address();
         address.setStreet("strees 17,bhagya nagar");
@@ -49,7 +49,7 @@ public class App
         Session session=sessionFactory.openSession();
         Transaction tx=session.beginTransaction();
         //session.persist(student);
-        //session.persist(address);
+        session.persist(address);
         tx.commit();
 
         session.close();

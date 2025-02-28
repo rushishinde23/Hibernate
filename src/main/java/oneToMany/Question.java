@@ -14,7 +14,7 @@ public class Question {
 
     private String question;
 
-    @OneToMany(mappedBy = "question",fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "question",fetch = FetchType.EAGER,cascade = CascadeType.ALL)
     private List<Answer> answerList;
 
     public Question(int questionId, String question, List<Answer> answerList) {

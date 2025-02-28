@@ -26,7 +26,7 @@ public class PaginationDemo {
             System.out.println(student);
         }
 
-        
+
         session.close();
         sessionFactory.close();
     }
